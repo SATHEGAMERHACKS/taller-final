@@ -1,0 +1,29 @@
+/* Reglas comunes: modelo de caja, elementos base, foco y accesibilidad. */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; }
+:is(h1, h2, h3, p) { margin: 0; }
+img { display: block; max-inline-size: 100%; block-size: auto; }
+:is(button, input, textarea) { font: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: default; }
+:focus-visible { outline: 2px solid var(--focus, #075eab); outline-offset: 3px; }
+.sr-only, .symbol-library {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: var(--space-4);
+  z-index: 2;
+  padding: var(--space-2) var(--space-4);
+  color: var(--ink);
+  background: var(--card);
+  transform: translateY(-110%);
+}
+.skip-link:focus { transform: translateY(0); }

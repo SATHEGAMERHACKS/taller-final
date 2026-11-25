@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Robot Visions: a responsive website for the class activity.">
+  <title>Robot Visions | Class Activity</title>
+  <link rel="icon" href="./assets/marca-f.webp">
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <svg class="symbol-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="avatar" viewBox="0 0 100 110">
+      <circle cx="50" cy="25" r="23"/>
+      <path d="M12 81c6-18 20-31 38-31s32 13 38 31c-7 17-22 29-38 29S19 98 12 81Z"/>
+    </symbol>
+    <symbol id="facebook" viewBox="0 0 24 24">
+      <path d="M14.5 22v-9h3l.5-3.5h-3.5V7.3c0-1 .3-1.7 1.8-1.7h1.9V2.4A24 24 0 0 0 15.4 2C12.5 2 11 3.8 11 7v2.5H8V13h3v9z"/>
+    </symbol>
+    <symbol id="twitter" viewBox="0 0 24 24">
+      <path d="M22 5.9a8.3 8.3 0 0 1-2.4.7 4.2 4.2 0 0 0 1.8-2.3 8.3 8.3 0 0 1-2.7 1 4.1 4.1 0 0 0-7 3.8A11.7 11.7 0 0 1 3.2 4.8a4.1 4.1 0 0 0 1.3 5.5 4.1 4.1 0 0 1-1.9-.5 4.1 4.1 0 0 0 3.3 4.1 4.1 4.1 0 0 1-1.8.1A4.1 4.1 0 0 0 8 16.8a8.3 8.3 0 0 1-6.1 1.7 11.7 11.7 0 0 0 18-9.9v-.5A8.4 8.4 0 0 0 22 5.9Z"/>
+    </symbol>
+    <symbol id="instagram" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="17.4" cy="6.7" r="1.2"/>
+    </symbol>
+    <symbol id="user-icon" viewBox="0 0 24 24">
+      <circle cx="12" cy="7" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2Z"/>
+    </symbol>
+    <symbol id="mail-icon" viewBox="0 0 24 24">
+      <path d="M2 5h20v2l-10 6L2 7zm0 4 10 6 10-6v10H2z"/>
+    </symbol>
+    <symbol id="edit-icon" viewBox="0 0 24 24">
+      <path d="m3 16 11-11 5 5L8 21H3zm12-12 2-2 5 5-2 2z"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Robot Visions home">
+        <img src="./assets/marca-f.webp" width="44" height="44" alt="">
+      </a>
+      <nav class="nav-links" id="navigation" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="display-controls" role="group" aria-label="Ajustes de visualización" lang="es">
+        <button type="button" id="text-smaller" aria-label="Reducir tamaño de letra" title="Reducir tamaño de letra">A−</button>
+        <button type="button" id="text-larger" aria-label="Aumentar tamaño de letra" title="Aumentar tamaño de letra">A+</button>
+        <button type="button" id="change-background" aria-label="Cambiar color de fondo" title="Cambiar color de fondo">Fondo</button>
+        <span class="sr-only" role="status" id="display-status"></span>
+      </div>
+      <button type="button" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navigation">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 id="hero-title">This is the title or a phrase related to the product</h1>
+          <p>Elit reiciendis aspernatur obcaecati accusantium corporis? Mollitia eius ratione excepturi.</p>
+          <a class="button button-outline" href="#about">Read More</a>
+        </div>
+        <img class="book-cover" src="./assets/robot-visions.webp" alt="Cover of Robot Visions by Isaac Asimov, with a seated gold robot" width="340" height="558" fetchpriority="high">
+      </div>
+    </section>
+
+    <section class="subscribe" aria-label="Subscribe">
+      <div class="container">
+        <form class="subscribe-form" data-demo-message="Demo only: no subscription was saved." aria-describedby="subscribe-note">
+          <label class="sr-only" for="subscriber-name">Your name</label>
+          <input id="subscriber-name" name="name" autocomplete="name" placeholder="Enter your Name" required>
+          <label class="sr-only" for="subscriber-email">Your email</label>
+          <input id="subscriber-email" name="email" type="email" autocomplete="email" placeholder="Enter your Email" required>
+          <button class="button button-primary" type="submit" disabled>Subscribe</button>
+          <p class="sr-only" id="subscribe-note">Demo form. This site does not send or store your details.</p>
+          <p class="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="features section" aria-label="Product features">
+      <div class="container cards feature-grid">
+        <article class="feature"><h2>Feature One</h2><p>Amet alias a ipsa tempora ullam asperiores aperiam rem?</p></article>
+        <article class="feature"><h2>Feature Two</h2><p>Amet alias a ipsa tempora ullam asperiores aperiam rem?</p></article>
+        <article class="feature"><h2>Feature Three</h2><p>Amet alias a ipsa tempora ullam asperiores.</p></article>
+        <article class="feature"><h2>Feature Four</h2><p>Amet alias a ipsa tempora ullam asperiores aperiam rem?</p></article>
+      </div>
+    </section>
+
+    <section class="about section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title">Why this Product?</h2>
+        <p>Consectetur dolor at delectus dolores fugiat! Rerum inventore cumque quidem corporis iusto temporibus nesciunt minima! Harum harum qui dolores natus dolore repudiandae quae animi aliquid nobis sed? Quod culpa quia?</p>
+      </div>
+    </section>
+
+    <section class="faq section" aria-label="Product questions">
+      <div class="container">
+        <div class="accordion">
+          <details name="product-faq" open>
+            <summary>Question One?</summary>
+            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+          </details>
+          <details name="product-faq">
+            <summary>Collapsible Group Item #2</summary>
+            <p>Robot Visions collects stories and essays about robots, their place in society, and the decisions they make.</p>
+          </details>
+          <details name="product-faq">
+            <summary>Collapsible Group Item #3</summary>
+            <p>Start with a short story and then read an essay to compare Asimov's fiction with his ideas about technology.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="team section" id="team" aria-labelledby="team-title">
+      <div class="container">
+        <h2 id="team-title">Team</h2>
+        <p class="section-intro">Adipisicing unde eum odio aliquam dolor ad voluptas expedita consequuntur aperiam inventore eaque. Dolorum facilis aut eum a delectus. Fugit velit quas harum quisquam amet provident inventore. Repudiandae repudiandae delectus.</p>
+        <div class="cards team-grid">
+          <article class="member">
+            <svg class="avatar" aria-hidden="true"><use href="#avatar"/></svg>
+            <h3>John Carter</h3>
+            <p>Dolor modi repudiandae quia beatae consectetur? Nam ullam fugit ullam, accusamus! Totam mollitia eveniet!</p>
+            <div class="socials" aria-hidden="true"><svg><use href="#facebook"/></svg><svg><use href="#twitter"/></svg><svg><use href="#instagram"/></svg></div>
+          </article>
+          <article class="member">
+            <svg class="avatar" aria-hidden="true"><use href="#avatar"/></svg>
+            <h3>John Carter</h3>
+            <p>Dolor modi repudiandae quia beatae consectetur? Nam ullam fugit ullam, accusamus! Totam mollitia eveniet!</p>
+            <div class="socials" aria-hidden="true"><svg><use href="#facebook"/></svg><svg><use href="#twitter"/></svg><svg><use href="#instagram"/></svg></div>
+          </article>
+          <article class="member">
+            <svg class="avatar" aria-hidden="true"><use href="#avatar"/></svg>
+            <h3>John Carter</h3>
+            <p>Dolor modi repudiandae quia beatae consectetur? Nam ullam fugit ullam, accusamus! Totam mollitia eveniet!</p>
+            <div class="socials" aria-hidden="true"><svg><use href="#facebook"/></svg><svg><use href="#twitter"/></svg><svg><use href="#instagram"/></svg></div>
+          </article>
+          <article class="member">
+            <svg class="avatar" aria-hidden="true"><use href="#avatar"/></svg>
+            <h3>John Carter</h3>
+            <p>Dolor modi repudiandae quia beatae consectetur? Nam ullam fugit ullam, accusamus! Totam mollitia eveniet!</p>
+            <div class="socials" aria-hidden="true"><svg><use href="#facebook"/></svg><svg><use href="#twitter"/></svg><svg><use href="#instagram"/></svg></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-inner">
+        <div>
+          <h2 id="contact-title">Contact</h2>
+          <p>Consectetur neque numquam autem animi?</p>
+          <form class="contact-form" data-demo-message="Demo only: your message was not sent." aria-describedby="contact-note">
+            <label class="sr-only" for="contact-name">Name</label>
+            <div class="field"><span aria-hidden="true"><svg><use href="#user-icon"/></svg></span><input id="contact-name" name="name" autocomplete="name" placeholder="Name" required></div>
+            <label class="sr-only" for="contact-email">Email</label>
+            <div class="field"><span aria-hidden="true"><svg><use href="#mail-icon"/></svg></span><input id="contact-email" name="email" type="email" autocomplete="email" placeholder="Email" required></div>
+            <label class="sr-only" for="message">Message</label>
+            <div class="field"><span aria-hidden="true"><svg><use href="#edit-icon"/></svg></span><textarea id="message" name="message" rows="7" placeholder="Message" required></textarea></div>
+            <button class="button button-primary" type="submit" disabled>Send</button>
+            <p class="sr-only" id="contact-note">Demo form. This site does not send or store your details.</p>
+            <p class="form-status" role="status"></p>
+          </form>
+        </div>
+        <img class="contact-brand" src="./assets/marca-f.webp" width="142" height="142" alt="" loading="lazy">
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">Copyright © 2018</footer>
+</body>
+</html>
